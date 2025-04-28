@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221 47% 26%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 164 83% 24%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 193 90% 39%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 47% 26%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* (Optional) Copy your dark-theme vars here if you need them */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-white text-gulf-dark font-tajawal;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-tajawal font-bold;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-gulf-primary mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-xl md:text-2xl text-gulf-dark/80 max-w-3xl mx-auto mb-12;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-gulf-primary via-gulf-primary to-gulf-secondary;
+  }
+  
+  .feature-card {
+    @apply p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+}
